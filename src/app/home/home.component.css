@@ -1,0 +1,37 @@
+.nav-link {
+  cursor:pointer;
+}
+
+.tag-pill{
+  cursor:pointer;
+}
+
+.banner{
+    background-image: url("../../assets/images/deepLearning.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 550px;
+    height: 550px;
+}
+
+.intro-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text button{
+   margin-top: 50px;
+}
+
+.home-page .process{
+  text-align: center;
+  color: black;
+}
+
+.home-page .follow{
+    background-color: black;
+}
+
+.home-page .follow h4{
+   font-weight: bold;
+   color: white;
+}

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar-brand img{
+    max-width: 30%;
+    margin-left: 50px;
+}
+
+.navbar{
+    border-bottom:1px solid; 
+}
+
+.navbar-nav h6{
+    color: black;
+    font-weight:bolder; 
+}
+
+
+a.nav-link.active h6{
+    color: red;
+}
+
+.sidenav{
+    background-color: grey;
+}
+
+ /* On small screens, set height to 'auto' for sidenav and grid */
+ @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
