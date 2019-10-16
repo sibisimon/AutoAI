@@ -19,26 +19,13 @@ export class HomeComponent implements OnInit {
   tagsLoaded = false;
 
   ngOnInit() {
-    this.userService.isAuthenticated.subscribe(
-      (authenticated) => {
-        this.isAuthenticated = authenticated;
-
-        // set the article list accordingly
-        if (authenticated) {
-          this.setListTo('feed');
-        } else {
-          this.setListTo('all');
-        }
-      }
-    );
-
-  }
-
-  setListTo(type: string = '', filters: Object = {}) {
-    // If feed is requested but user is not authenticated, redirect to login
-    if (type === 'feed' && !this.isAuthenticated) {
-      this.router.navigateByUrl('/login');
-      return;
+    this.isAuthenticated = this.userService.isAuthenticated();
+    if (!this.isAuthenticated) {
+      this.router.navigateByUrl('');
+    }
+    else{
+      this.router.navigateByUrl('account/dashboard');
     }
   }
+
 }

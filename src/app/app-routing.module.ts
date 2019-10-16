@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
+
+
 const routes: Routes = [
+
 ];
 
 @NgModule({
@@ -14,3 +18,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+

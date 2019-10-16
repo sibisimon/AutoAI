@@ -1,0 +1,34 @@
+<div sidnav-wrapper>
+     <li class="side-menus">
+          <a  routerLink="/account/dashboard"><ul (click)="selectActive(1)" [ngClass]="status==1 ? 'active' : ''" >
+               <span class="side-nav-icon">
+               <fa name="tachometer"></fa></span>
+               Dashboard
+          </ul></a>
+          <a  routerLink="/account/mlmodels"><ul (click)="selectActive(2)" [ngClass]="status==2 ? 'active' : ''">
+               <span class="side-nav-icon">
+               <fa name="gift"></fa></span>
+               ML Models
+          </ul></a>
+          <a  routerLink="/account/projects"><ul (click)="selectActive(3)" [ngClass]="status==3 ? 'active' : ''">
+               <span class="side-nav-icon">
+               <fa name="plus-circle"></fa></span>
+               Projects
+          </ul></a>
+          <a  routerLink="/account/payments"><ul (click)="selectActive(4)" [ngClass]="status==4 ? 'active' : ''">
+               <span class="side-nav-icon">
+               <fa name="credit-card"></fa></span>
+               Payments
+          </ul></a>
+          <a routerLink="/account/profile"><ul (click)="selectActive(5)" [ngClass]="status==5 ? 'active' : ''" >
+               <span class="side-nav-icon">
+               <fa name="user"></fa></span>
+               Profile
+          </ul></a>
+          <a  routerLink="/account/news"><ul (click)="selectActive(6)" [ngClass]="status==6 ? 'active' : ''">
+               <span class="side-nav-icon">
+               <fa name="file"></fa></span>
+               News Feeds
+          </ul></a>
+     </li>
+</div>

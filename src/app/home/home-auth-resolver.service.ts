@@ -14,10 +14,14 @@ export class HomeAuthResolver implements Resolve<boolean> {
 
   resolve(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
+    state: RouterStateSnapshot): boolean {
+      const url: string = state.url;
+      return this.checkLogin(url);
+    }
 
-    return this.userService.isAuthenticated.pipe(take(1));
-
+    checkLogin(url: string) {
+      if (this.userService.isAuthenticated()) {
+        return true;
+      }
   }
 }

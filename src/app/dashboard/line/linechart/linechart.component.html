@@ -1,0 +1,13 @@
+<h6>PAYMENT HISTORY</h6>
+<hr>
+<div style="width: 71%;">
+    <canvas
+        baseChart
+        [chartType]="'line'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartClick)="onChartClick($event)">
+    </canvas>
+  </div>

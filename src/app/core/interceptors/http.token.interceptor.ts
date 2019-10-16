@@ -1,12 +1,11 @@
 import { Injectable, Injector } from '@angular/core';
 import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-import { JwtService } from '../services';
+import { UserService } from '../services/user.service';
 
 @Injectable()
 export class HttpTokenInterceptor implements HttpInterceptor {
-  constructor(private jwtService: JwtService) {}
+  constructor(private UserService: UserService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const headersConfig = {
@@ -14,7 +13,7 @@ export class HttpTokenInterceptor implements HttpInterceptor {
       'Accept': 'application/json'
     };
 
-    const token = this.jwtService.getToken();
+    const token = this.UserService.getAuthorizationToken();
 
     if (token) {
       headersConfig['Authorization'] = `Token ${token}`;

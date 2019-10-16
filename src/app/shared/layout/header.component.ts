@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UserService } from '../../core';
-import {User} from '../../core/models'
+import {User} from '../../core/models';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout-header',
@@ -9,16 +10,18 @@ import {User} from '../../core/models'
 })
 export class HeaderComponent implements OnInit {
   constructor(
-    private userService: UserService
+    private router: Router,
+    private userService: UserService,
   ) {}
 
   currentUser: User;
 
+  logoutUser(): void {
+    this.userService.purgeAuth();
+    window.location.reload();
+  }
+
   ngOnInit() {
-    this.userService.currentUser.subscribe(
-      (userData) => {
-        this.currentUser = userData;
-      }
-    );
+    this.currentUser = this.userService.currentUser;
   }
 }

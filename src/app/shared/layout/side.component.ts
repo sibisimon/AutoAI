@@ -5,5 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './side.component.html'
 })
 export class SideComponent {
-  today: number = Date.now();
+  status:number = 1;
+  selectActive(num){
+    this.status = num;       
+  }
 }

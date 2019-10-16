@@ -14,10 +14,12 @@ export class NoAuthGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> {
+    state: RouterStateSnapshot): boolean {
+      const url: string = state.url;
+      return this.checkLogin(url);
+    }
 
-    return this.userService.isAuthenticated.pipe(take(1), map(isAuth => !isAuth));
-
-  }
+    checkLogin(url: string) {
+        return true;
+    }
 }

@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    padding: 0px;
+}
+
+.layout-container{
+    bottom: 0px;
+}
+
 .navbar-brand img{
     max-width: 30%;
     margin-left: 50px;
@@ -6,11 +14,17 @@
 
 .navbar{
     border-bottom:1px solid; 
+    border-radius: 0px;
 }
 
 .navbar-nav h6{
-    color: black;
+    color: white;
     font-weight:bolder; 
+}
+
+.user-pic{
+    margin-right: 7px;
+    width: 26px;
 }
 
 
@@ -18,15 +32,242 @@ a.nav-link.active h6{
     color: red;
 }
 
+a.nav-link{
+    color: white !important;
+}
+
 .sidenav{
-    background-color: grey;
+    background-color: #353839;
 }
 
  /* On small screens, set height to 'auto' for sidenav and grid */
- @media screen and (max-width: 767px) {
-    .sidenav {
-      height: auto;
-      padding: 15px;
-    }
-    .row.content {height:auto;} 
-  }
+.sidenav {
+    bottom: 0px;
+    overflow: hidden;
+    min-width: 150px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sidenav a:hover, a:active, a:visited, a:focus{
+    text-decoration: none;
+}
+
+.side-menus{
+    color: white;
+    list-style-type: none;
+    width: 100%;
+}
+
+.sidenav .sidnav-wrapper{
+    position: fixed;
+}
+
+.side-menus ul{
+    border-bottom:1px solid white;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    text-align: left;
+}
+
+.side-menus ul:hover{
+    background: #282828;
+}
+
+.side-nav-icon{
+    padding-left: 22px;
+    padding-right: 15px;
+    font-size: 22px;
+
+}
+.side-menus .active{
+    background: #282828;
+    border-right:6px solid red;
+    color: #19dc19;
+}
+
+.nav-color{
+    background: #111D4A;
+}
+
+.data-block{
+    box-shadow:1px 1px 7px 2px rgba(0.3,0.3,0.3,0.3);
+    transition: 0.3s;
+    padding: 8px;
+    width: 100%;
+    margin-top:10px;
+    position: relative;
+}
+
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif; 
+    padding: 45px 40px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  red;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+.logout{
+	cursor: pointer;
+}
